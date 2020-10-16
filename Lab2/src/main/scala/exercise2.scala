@@ -38,6 +38,7 @@ object exercise2
 			val pointsSeq = for {_ <- 1 to N} yield (generator.nextDouble(), generator.nextDouble())
 			
 			def isInCircle(point: (Double, Double)): Boolean = point._1 * point._1 + point._2 * point._2 < 1
+			
 			4.0 * pointsSeq.count(isInCircle) / N
 		}
 		
