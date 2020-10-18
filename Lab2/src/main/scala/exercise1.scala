@@ -1,7 +1,7 @@
 /*
 Exercise 1
 The goal is to generate natural numbers that are not squares of some other natural numbers up to a value N.
-//////own note: these are simply not perfect squares
+//////own note: these are not perfect squares
 For N == 11 the result should be:
 2 3 5 6 7 8 10 11 (4 and 9 should not be printed)
 The N should be passed from the command line. If nothing is passed then 50 first natural numbers need to be printed.
@@ -16,7 +16,6 @@ object exercise1
 	
 	def main(args: Array[String]): Unit =
 	{
-		val N = if (args.length == 0) 50 else args(0).toInt
-		generateNumbers(N)
+		generateNumbers(if (args.length == 0) 50 else args(0).toInt)
 	}
 }
