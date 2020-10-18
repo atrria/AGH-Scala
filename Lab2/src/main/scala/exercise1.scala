@@ -12,7 +12,7 @@ The solution that looks like C/Java program will win only 4 points. Scala specif
 
 object exercise1
 {
-	def generateNumbers(N: Int): Unit =	(for { i <- 1 to N if Math.pow(Math.sqrt(i).toInt, 2) != i} yield i).foreach(println)
+	def generateNumbers(N: Int): Unit = (for { i <- 1 to N if Math.pow(Math.sqrt(i).toInt, 2) != i} yield i).foreach(println)
 	
 	def main(args: Array[String]): Unit =
 	{
