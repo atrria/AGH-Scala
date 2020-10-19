@@ -1,2 +1,2 @@
 # AGH-Scala
- Functional programming in Scala course, taught in English
+ Functional programming in Scala, taught in English.
