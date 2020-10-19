@@ -42,7 +42,7 @@ object exercise2
 			4.0 * pointsSeq.count(isInCircle) / N
 		}
 		
-		// version 1:
+		// version 3:
 		def calculatePI3(): Double =
 		{
 			val generator = new Random
