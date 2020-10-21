@@ -18,11 +18,17 @@ object exercise2b
 		val x = Array.ofDim[Int](4, 4)
 		for (i <- 0 until 4; j <- 0 until 4) x(i)(j) = i + j
 		
+		def niceRowPrint(row: Array[Int]): Unit = print(row.mkString("|", " ", "|\n"))
+		
 		def nicePrint(arr: Array[Array[Int]]): Unit =
 		{
-			def niceRowPrint(row: Array[Int]): Unit = print(row.mkString("|", " ", "|\n"))
-			for (i <- arr.indices) niceRowPrint(arr(i))
+			for (i <- arr) niceRowPrint(i)
+			
+			//for (i<- arr.indices) niceRowPrint(arr(i))
+			//for (i<- 0 until arr.length) niceRowPrint(arr(i))
 		}
+		
+		nicePrint(x)
 		
 		// niceRowPrint without .mkString
 		/*def niceRowPrint(row: Array[Int]): Unit =
@@ -31,7 +37,5 @@ object exercise2b
 			for (i <- 1 until row.length) print(s" ${row(i)}")
 			println("|")*/
 		}*/
-		
-		nicePrint(x)
 	}
 }
