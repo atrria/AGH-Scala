@@ -9,10 +9,12 @@ example invocation:
 Technique using default parameters or inner function can be used.
  */
 
+import scala.annotation.tailrec
+
 object exercise2
 {
 	// version 1 with default params
-	@scala.annotation.tailrec
+	@tailrec
 	def sumfrac2(e: Double, frac: Double = 1, fracSum: Double = 0): Double =
 	{
 		if (frac < e) fracSum else sumfrac2(e, frac / 2, fracSum + frac)
@@ -21,7 +23,7 @@ object exercise2
 	// version 2 with inner function
 	def sumfrac(e: Double): Double =
 	{
-		@scala.annotation.tailrec
+		@tailrec
 		def sum(currentSum: Double, frac: Double): Double = if (frac < e) currentSum else sum(currentSum + frac, frac / 2.0)
 		
 		sum(0, 1)

@@ -1,3 +1,21 @@
+/*
+We have a 2D array:
+val x = Array.ofDim[Int](4,5);
+for ( i <- 0 until 4; j <- 0 until 5) x(i)(j) = i+j
+Goal is to write functions:
+1) to print this array in the following form:
+| 0 1 2 3 4 |
+| 1 2 3 4 5 |
+| 2 3 4 5 6 |
+| 3 4 5 6 7 |
+2) obtain two 1D arrays, one containing sum of elements in each row,
+and second containing sum of elements in each column
+3) to create an array that is transposed
+4) merge two arrays x and y of identical sizes (here 4x5) so that each
+element in the resulting array is larger of the corresponding element in
+x and y
+ */
+
 object exercise1b
 {
 	def main(args: Array[String]): Unit =

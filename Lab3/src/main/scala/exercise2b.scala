@@ -1,3 +1,17 @@
+/*
+The goal is to write such function that the example code below compiles and gives
+expected results (on the right). Reminder, no external materials are allowed.
+	println( pi )
+	println( pi(pi) ) //multiplication
+	println( pi(pi(pi)) )
+	println(repN(5, (x: Int) => 2*x , 1 )) // repeat function application N times i.e. f(f(f(f(f(1))))), 1 the argument of the first invocation
+Expected results:
+	3.1415
+	9.86902225 // multiplication
+	31.003533398375
+	32
+ */
+
 import scala.annotation.tailrec
 
 object exercise2b
