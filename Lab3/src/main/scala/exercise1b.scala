@@ -20,17 +20,17 @@ object exercise1b
 		val row = Array.ofDim[Int](arr.length)
 		val column = Array.ofDim[Int](arr.head.length)
 		
-		for (i <- 0 until arr.length)
+		for (i <- arr.indices)
 		{
-			for (j <- 0 until arr.head.length)
+			for (j <- arr.head.indices)
 			{
 				column(j) = column(j) + arr(i)(j)
 			}
 		}
 		
-		for (i <- 0 until arr.head.length)
+		for (i <- arr.head.indices)
 		{
-			for (j <- 0 until arr.length)
+			for (j <- arr.indices)
 			{
 				row(j) = column(j) + arr(j)(i)
 			}
@@ -44,9 +44,9 @@ object exercise1b
 	def arrMerge(x: Array[Array[Int]], y: Array[Array[Int]]): Array[Array[Int]] =
 	{
 		val arr = Array.ofDim[Int](x.length, x.head.length)
-		for ( i<- 0 until x.length)
+		for ( i<- x.indices)
 		{
-			for (j<- 0 until x.head.length)
+			for (j<- x.head.indices)
 			{
 				arr(i)(j) = Math.max(x(i)(j),y(i)(j))
 			}
