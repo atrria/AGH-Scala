@@ -22,9 +22,9 @@ object exercise2
 	def sumfrac(e: Double): Double =
 	{
 		@scala.annotation.tailrec
-		def sum(e: Double, currentSum: Double, frac: Double): Double = if (frac < e) currentSum else sum(e, currentSum + frac, frac / 2.0)
+		def sum(currentSum: Double, frac: Double): Double = if (frac < e) currentSum else sum(currentSum + frac, frac / 2.0)
 		
-		sum(e, 0, 1)
+		sum(0, 1)
 	}
 	
 	def main(args: Array[String]): Unit =
