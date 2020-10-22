@@ -1,4 +1,5 @@
 /*
+Exercise 1
 We have a 2D array:
 val x = Array.ofDim[Int](4,5);
 for ( i <- 0 until 4; j <- 0 until 5) x(i)(j) = i+j

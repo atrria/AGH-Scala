@@ -1,4 +1,5 @@
 /*
+Exercise 2
 The goal is to write such function that the example code below compiles and gives
 expected results (on the right). Reminder, no external materials are allowed.
 	println( pi )
