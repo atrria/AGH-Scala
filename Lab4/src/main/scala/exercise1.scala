@@ -16,8 +16,8 @@ object exercise1
 		{
 			l match {
 				case Nil => a
-				case h :: t if (f(h)) => recursion(t, a :+ h)
-				case h :: t => recursion(t, a)
+				case h :: t if f(h) => recursion(t, a :+ h)
+				case _ :: t => recursion(t, a)
 			}
 		}
 		

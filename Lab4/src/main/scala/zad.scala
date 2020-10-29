@@ -1,21 +1,21 @@
-import MapPoint._
+//import MapPoint._
 
 object zad extends App
 {
 	
-	val krk = MapPoint("Krakow", 50.061389, 19.938333);
+	val krk = MapPoint("Krakow", 50.061389, 19.938333)
 	
-	println(krk);
+	println(krk)
 	
-	val nyc = MapPoint("NYC", 40.7127, -74.0059);
+	val nyc = MapPoint("NYC", 40.7127, -74.0059)
 	
-	println(nyc);
+	println(nyc)
 	
-	val porto = MapPoint("Porto", 41.162142, -8.621953);
+	val porto = MapPoint("Porto", 41.162142, -8.621953)
 	
-	val irkutsk = MapPoint("Irkutsk", 52.283333, 104.283333);
+	val irkutsk = MapPoint("Irkutsk", 52.283333, 104.283333)
 	
-	println(irkutsk);
+	println(irkutsk)
 	
 	
 	
@@ -26,7 +26,7 @@ object zad extends App
 	println(krk.distanceTo(porto))
 	
 	
-	val mp = inTheMiddle(krk, irkutsk, "Somwhere in Russia");
+	val mp = inTheMiddle(krk, irkutsk, "Somwhere in Russia")
 	
 	println(mp + " " + (mp - krk) + " " + (mp - irkutsk))
 	
@@ -34,7 +34,7 @@ object zad extends App
 	
 	val r = Route( krk, nyc, porto )
 	
-	println( r );
+	println( r )
 	
 	r.addStop( porto.move( 1, 1 ) )
 	
@@ -63,15 +63,15 @@ Irkutsk 52.283333N 104.283333E -> Nearby Porto 42.162142N 7.6219529999999995W ->
 		{
 			val signX =
 				this.d match {
-					case n if (n > 0) => "N"
-					case s if (s < 0) => "S"
+					case n if n > 0 => "N"
+					case s if s < 0 => "S"
 					case _ => ""
 				}
 			
 			val signY =
 				this.d1 match {
-					case e if (e > 0) => "E"
-					case w if (w < 0) => "W"
+					case e if e > 0 => "E"
+					case w if w < 0 => "W"
 					case _ => ""
 				}
 			
