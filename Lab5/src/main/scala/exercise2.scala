@@ -39,5 +39,5 @@ object exercise2
 		println(shapes.mkString("\n"))
 		
 	}
-
+	
 }
